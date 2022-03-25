@@ -30,7 +30,7 @@ jobs:
         run: yarn run build
 
       - name: Publish npm package
-        run: yarn publish
+        run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

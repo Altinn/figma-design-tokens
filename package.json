@@ -1,6 +1,6 @@
 {
   "name": "@altinn/figma-design-tokens",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "packageManager": "yarn@3.2.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
