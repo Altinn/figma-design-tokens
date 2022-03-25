@@ -23,6 +23,9 @@ jobs:
           node-version: "16.x"
           registry-url: "https://npm.pkg.github.com"
 
+      - name: Install dependencies
+        run: yarn install --immutable
+
       - name: Build
         run: yarn run build
 
