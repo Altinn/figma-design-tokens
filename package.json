@@ -1,0 +1,19 @@
+{
+  "name": "@altinn/figma-design-tokens",
+  "packageManager": "yarn@3.2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.7.0",
+    "token-transformer": "^0.0.19"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "yarn run generate-json && yarn run generate-others",
+    "generate-json": "token-transformer tokens.json dist/tokens.json --expandTypography",
+    "generate-others": "style-dictionary build"
+  }
+}
