@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"altinn-figma-design-tokens@workspace:.":
+"@altinn/figma-design-tokens@workspace:.":
   version: 0.0.0-use.local
-  resolution: "altinn-figma-design-tokens@workspace:."
+  resolution: "@altinn/figma-design-tokens@workspace:."
   dependencies:
     style-dictionary: ^3.7.0
     token-transformer: ^0.0.19

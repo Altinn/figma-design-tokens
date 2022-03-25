@@ -17,14 +17,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "altinn-figma-design-tokens",\
+        "name": "@altinn/figma-design-tokens",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["altinn-figma-design-tokens", ["workspace:."]]\
+      ["@altinn/figma-design-tokens", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -39,11 +39,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT"\
         }]\
       ]],\
-      ["altinn-figma-design-tokens", [\
+      ["@altinn/figma-design-tokens", [\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["altinn-figma-design-tokens", "workspace:."],\
+            ["@altinn/figma-design-tokens", "workspace:."],\
             ["style-dictionary", "npm:3.7.0"],\
             ["token-transformer", "npm:0.0.19"]\
           ],\
