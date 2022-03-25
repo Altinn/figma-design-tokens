@@ -1,5 +1,5 @@
 # Built files
-dist/
+/dist/
 
 # Yarn stuff; we're using PnP/Zero installs
 .yarn/*
@@ -11,7 +11,7 @@ dist/
 !.yarn/versions
 
 # Really don't want that
-node_modules/
+/node_modules/
 
 # Local env variables should stay local
 .env
