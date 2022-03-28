@@ -68,8 +68,11 @@ console.log(`Creating release ${newVersion}`);
 
 packageJson.version = newVersion;
 await writeJson("./package.json", packageJson);
-console.log("- bumped version in package.json");
+console.log("- bump version in package.json");
+
+await simpleGit().add("./package.json").commit(`Bump to version ${newVersion}`);
+console.log("- commit new version");
 
 await simpleGit().addAnnotatedTag(`v${newVersion}`, `Release ${newVersion}`);
-console.log("- created tag");
+console.log("- create tag");
 console.log("Done; now run `git push --follow-tags` to trigger CI/CD");
