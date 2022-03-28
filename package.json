@@ -18,6 +18,7 @@
   "scripts": {
     "build": "yarn run generate-json && yarn run generate-others",
     "generate-json": "token-transformer tokens.json dist/tokens.json --expandTypography",
-    "generate-others": "style-dictionary build"
+    "generate-others": "style-dictionary build",
+    "release": "yarn node ./release.mjs"
   }
 }

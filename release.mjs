@@ -4,7 +4,7 @@ import semver from "semver";
 import simpleGit from "simple-git";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 
 const RELEASE_BRANCH = "main";
 
@@ -15,6 +15,11 @@ async function readJson(path) {
   } catch (e) {
     throw `Cannot parse "${path}" as JSON`;
   }
+}
+
+async function writeJson(path, object) {
+  const stringifiedJson = JSON.stringify(object, null, 2);
+  return await writeFile(new URL(path, import.meta.url), stringifiedJson);
 }
 
 const { forceUnclean, _: commands } = yargs(hideBin(process.argv))
@@ -48,7 +53,8 @@ if (gitStatus.files.length > 0 && !forceUnclean) {
   process.exit(1);
 }
 
-const { version: currentVersion } = await readJson("./package.json");
+const packageJson = await readJson("./package.json");
+const currentVersion = packageJson.version;
 
 if (!semver.valid(currentVersion)) {
   console.log(`Version "${currentVersion}" in \`package.json\` is not valid`);
@@ -59,3 +65,11 @@ const releaseType = commands[0];
 const newVersion = semver.inc(currentVersion, releaseType);
 
 console.log(`Creating release ${newVersion}`);
+
+packageJson.version = newVersion;
+await writeJson("./package.json", packageJson);
+console.log("- bumped version in package.json");
+
+await simpleGit().addAnnotatedTag(`v${newVersion}`, `Release ${newVersion}`);
+console.log("- created tag");
+console.log("Done; now run `git push --follow-tags` to trigger CI/CD");
