@@ -5,15 +5,15 @@
       "transformGroup": "js",
       "files": [
         {
-          "destination": "dist/cjs/index.js",
+          "destination": "dist/tokens.cjs.js",
           "format": "javascript/module-flat"
         },
         {
-          "destination": "dist/esm/index.js",
+          "destination": "dist/tokens.esm.js",
           "format": "javascript/es6"
         },
         {
-          "destination": "dist/index.d.ts",
+          "destination": "dist/tokens.d.ts",
           "format": "typescript/es6-declarations"
         }
       ]
@@ -22,7 +22,7 @@
       "transformGroup": "css",
       "files": [
         {
-          "destination": "dist/css/variables.css",
+          "destination": "dist/tokens.css",
           "format": "css/variables"
         }
       ]

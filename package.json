@@ -13,12 +13,12 @@
     "token-transformer": "^0.0.19",
     "yargs": "^17.4.0"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
+  "main": "dist/tokens.cjs.js",
+  "module": "dist/esm/tokens.esm.js",
+  "types": "dist/tokens.d.ts",
   "scripts": {
     "build": "yarn run clean && yarn run generate-json && yarn run generate-others",
     "clean": "rimraf dist",
