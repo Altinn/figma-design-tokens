@@ -6,17 +6,22 @@
     "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "semver": "^7.3.5",
     "simple-git": "^3.4.0",
     "style-dictionary": "^3.7.0",
     "token-transformer": "^0.0.19",
     "yargs": "^17.4.0"
   },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
-    "dist/"
+    "dist"
   ],
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "yarn run generate-json && yarn run generate-others",
+    "build": "yarn run clean && yarn run generate-json && yarn run generate-others",
+    "clean": "rimraf dist",
     "generate-json": "token-transformer tokens.json dist/tokens.json --expandTypography",
     "generate-others": "style-dictionary build",
     "release": "yarn node ./release.mjs"

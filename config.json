@@ -1,6 +1,23 @@
 {
   "source": ["dist/tokens.json"],
   "platforms": {
+    "js": {
+      "transformGroup": "js",
+      "files": [
+        {
+          "destination": "dist/cjs/index.js",
+          "format": "javascript/module-flat"
+        },
+        {
+          "destination": "dist/esm/index.js",
+          "format": "javascript/es6"
+        },
+        {
+          "destination": "dist/index.d.ts",
+          "format": "typescript/es6-declarations"
+        }
+      ]
+    },
     "css": {
       "transformGroup": "css",
       "files": [

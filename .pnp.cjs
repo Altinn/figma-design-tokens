@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["rimraf", "npm:3.0.2"],\
             ["semver", "npm:7.3.5"],\
             ["simple-git", "npm:3.4.0"],\
             ["style-dictionary", "npm:3.7.0"],\
@@ -47,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@altinn/figma-design-tokens", "workspace:."],\
+            ["rimraf", "npm:3.0.2"],\
             ["semver", "npm:7.3.5"],\
             ["simple-git", "npm:3.4.0"],\
             ["style-dictionary", "npm:3.7.0"],\
@@ -530,6 +532,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/require-directory-npm-2.1.1-8608aee50b-fb47e70bf0.zip/node_modules/require-directory/",\
           "packageDependencies": [\
             ["require-directory", "npm:2.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["rimraf", [\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/rimraf-npm-3.0.2-2cb7dac69a-87f4164e39.zip/node_modules/rimraf/",\
+          "packageDependencies": [\
+            ["rimraf", "npm:3.0.2"],\
+            ["glob", "npm:7.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
