@@ -12,6 +12,11 @@ jobs:
     name: Manual build & release
     runs-on: ubuntu-20.04
     steps:
+      - name: Config Git
+        run: |
+          git config --global user.name 'Automated action'
+          git config --global user.email 'no-reply@users.noreply.github.com'
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -22,7 +27,5 @@ jobs:
 
       - name: Commit
         run: |
-          git config --global user.name 'Automated action'
-          git config --global user.email 'no-reply@users.noreply.github.com'
           git commit -am "Automated commit"
           git push --follow-tags
