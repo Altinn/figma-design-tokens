@@ -28,4 +28,4 @@ jobs:
       - name: Push tag
         run: git push --follow-tags
 
-      - uses: ./.github/workflows/release
+      - uses: ./.github/workflows/release.yaml
