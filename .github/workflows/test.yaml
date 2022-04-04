@@ -1,0 +1,28 @@
+name: Test manual trigger
+on:
+  workflow_call:
+    inputs:
+      release_type:
+        description: "The type of release (patch, minor, major)"
+        required: true
+        type: string
+
+jobs:
+  manual_release:
+    name: Manual build & release
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Run script
+        run: yarn release ${{ inputs.release_type }}
+
+      - name: Commit
+        run: |
+          git config --global user.name 'Automated action'
+          git config --global user.email 'no-reply@users.noreply.github.com'
+          git commit -am "Automated commit"
+          git push --follow-tags
