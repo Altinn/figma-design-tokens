@@ -15,7 +15,7 @@ jobs:
       - name: Config Git
         run: |
           git config --global user.name 'Automated action'
-          git config --global user.email 'no-reply@users.noreply.github.com'
+          git config --global user.email 'automated-action@example.com'
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -27,3 +27,5 @@ jobs:
 
       - name: Push tag
         run: git push --follow-tags
+
+      - uses: ./.github/workflows/release
