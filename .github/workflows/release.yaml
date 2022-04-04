@@ -1,6 +1,7 @@
 name: Release
 on:
-  workflow_call:
+  workflow_run:
+    workflows: ["Test manual trigger"]
   push:
     tags:
       - "v*.*.*"
