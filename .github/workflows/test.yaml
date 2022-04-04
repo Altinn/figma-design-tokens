@@ -25,7 +25,5 @@ jobs:
       - name: Run script
         run: yarn release ${{ github.event.inputs.release_type }}
 
-      - name: Commit
-        run: |
-          git commit -am "Automated commit"
-          git push --follow-tags
+      - name: Push tag
+        run: git push --follow-tags
