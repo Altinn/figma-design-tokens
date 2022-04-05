@@ -5,6 +5,7 @@ on:
       release_type:
         description: "The type of release (one of 'patch', 'minor', or 'major')"
         required: true
+        default: patch
         type: string
   push:
     tags:
@@ -44,8 +45,8 @@ jobs:
       - name: Prepare release version 1
         if: github.event.inputs.release_type == 'patch'
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           yarn release ${{ github.event.inputs.release_type }}
 
       - name: Prepare release version 2
