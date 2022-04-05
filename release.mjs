@@ -46,7 +46,14 @@ if (branchInfo.current !== RELEASE_BRANCH) {
   process.exit(1);
 }
 
+await simpleGit().fetch();
+
 const gitStatus = await simpleGit().status();
+
+if (gitStatus.behind > 0) {
+  console.log("Local repo is behind remote; run `git pull`");
+  process.exit(1);
+}
 
 if (gitStatus.files.length > 0 && !forceUnclean) {
   console.log("Local repo is not clean; run `git status`");
