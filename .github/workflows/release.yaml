@@ -47,6 +47,13 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git status
+
+      - name: Prepare release version 1.1
+        if: github.event.inputs.release_type == 'patch'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           yarn release ${{ github.event.inputs.release_type }}
 
       - name: Prepare release version 2
