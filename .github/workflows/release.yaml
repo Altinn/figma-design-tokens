@@ -36,14 +36,9 @@ jobs:
       - name: Build
         run: yarn run build
 
-      - name: Debug event
-        env:
-          EVENT_CONTEXT: ${{ toJSON(github.event) }}
-        run: |
-          echo ">> ${{ github.event.action }} <<"
-
       - name: Prepare release version
-        if: github.event.inputs.release_type == 'patch'
+        # This step runs if the trigger is run manually; the version is created by calling `yarn release`
+        if: ${{ ! github.event.after }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -52,7 +47,8 @@ jobs:
           git push --follow-tags
 
       - name: Get release version
-        if: github.event.inputs.release_type != 'patch'
+        # This step runs if a tag "v*.*.*" is pushed; the version is assumed created
+        if: ${{ github.event.after }}
         run: |
           echo "release_version=${{ github.ref }}" >> $GITHUB_ENV
 
