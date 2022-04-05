@@ -1,7 +1,11 @@
 name: Release
 on:
-  workflow_run:
-    workflows: ["Test manual trigger"]
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: "The type of release (one of 'patch', 'minor', or 'major')"
+        required: true
+        type: string
   push:
     tags:
       - "v*.*.*"
@@ -14,6 +18,9 @@ jobs:
       contents: write
       packages: write
     steps:
+      - name: Config git
+        uses: fregante/setup-git-user@v1
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -31,6 +38,26 @@ jobs:
       - name: Build
         run: yarn run build
 
+      - name: Debug event
+        env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        run: |
+          echo $EVENT_CONTEXT
+
+      - name: Prepare release version
+        if: github.event.inputs.release_type == 'patch'
+        run: |
+          git config --global user.name 'Automated action'
+          git config --global user.email 'automated-action@example.com'
+          yarn release ${{ github.event.inputs.release_type }}
+          echo "release_version=`git describe`" >> $GITHUB_ENV
+          git push --follow-tags
+
+      - name: Get release version
+        if: github.event.inputs.release_type != 'patch'
+        run: |
+          echo "release_version=${{ github.ref }}" >> $GITHUB_ENV
+
       - name: Publish npm package
         run: yarn npm publish --access public
         env:
@@ -41,7 +68,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ env.release_version }}
+          release_name: Release ${{ env.release_version }}
           draft: false
           prerelease: false
