@@ -40,7 +40,7 @@ jobs:
         env:
           EVENT_CONTEXT: ${{ toJSON(github.event) }}
         run: |
-          echo ">> ${{ github.event.action }} <<""
+          echo ">> ${{ github.event.action }} <<"
 
       - name: Prepare release version
         if: github.event.inputs.release_type == 'patch'

@@ -18,7 +18,7 @@ async function readJson(path) {
 }
 
 async function writeJson(path, object) {
-  const stringifiedJson = JSON.stringify(object, null, 2);
+  const stringifiedJson = JSON.stringify(object, null, 2) + "\n";
   return await writeFile(new URL(path, import.meta.url), stringifiedJson);
 }
 
