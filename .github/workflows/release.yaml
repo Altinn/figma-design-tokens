@@ -42,30 +42,13 @@ jobs:
         run: |
           echo $EVENT_CONTEXT
 
-      - name: Prepare release version 1
-        if: github.event.inputs.release_type == 'patch'
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git status
-
-      - name: Prepare release version 1.1
+      - name: Prepare release version
         if: github.event.inputs.release_type == 'patch'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           yarn release ${{ github.event.inputs.release_type }}
-
-      - name: Prepare release version 2
-        if: github.event.inputs.release_type == 'patch'
-        run: |
           echo "release_version=`git describe`" >> $GITHUB_ENV
-          git describe
-          git status
-
-      - name: Prepare release version 3
-        if: github.event.inputs.release_type == 'patch'
-        run: |
           git push --follow-tags
 
       - name: Get release version
