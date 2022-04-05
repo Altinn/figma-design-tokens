@@ -53,6 +53,8 @@ jobs:
           git config --global user.email 'automated-action@example.com'
           yarn release ${{ github.event.inputs.release_type }}
           echo "release_version=`git describe`" >> $GITHUB_ENV
+          git describe
+          git status
           git push --follow-tags
 
       - name: Get release version
