@@ -18,13 +18,15 @@ jobs:
       contents: write
       packages: write
     steps:
-      - name: Config git
-        uses: fregante/setup-git-user@v1
-
       - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+
+      - name: Config git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Set up Node
         uses: actions/setup-node@v2
