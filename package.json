@@ -8,7 +8,7 @@
   "devDependencies": {
     "rimraf": "^3.0.2",
     "semver": "^7.3.5",
-    "simple-git": "^3.4.0",
+    "simple-git": "^3.5.0",
     "style-dictionary": "^3.7.0",
     "token-transformer": "^0.0.19",
     "yargs": "^17.4.0"
