@@ -17,7 +17,7 @@
     "dist"
   ],
   "main": "dist/tokens.cjs.js",
-  "module": "dist/esm/tokens.esm.js",
+  "module": "dist/tokens.esm.js",
   "types": "dist/tokens.d.ts",
   "scripts": {
     "build": "yarn run clean && yarn run generate-json && yarn run generate-others",
