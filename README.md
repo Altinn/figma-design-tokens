@@ -7,7 +7,7 @@ Design tokens generated from Figma.
 - [Acquire a GitHub PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The only permission you need to grant is `read:packages`
 - Assign the PAT to the `GITHUB_PACKAGES_PAT` environment variable:
   - Mac/Linux: add the line `export GITHUB_PACKAGES_PAT=<PAT>` to `~/.bash_profile` and restart the terminal
-  - Windows: Run `setx GITHUB_PACKAGES_PAT=<PAT>` and restart the terminal
+  - Windows: Run `setx GITHUB_PACKAGES_PAT <PAT> /m` and restart the terminal
 
 ### Yarn 2+
 
