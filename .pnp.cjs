@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["change-case", "npm:4.1.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["semver", "npm:7.3.5"],\
             ["simple-git", "npm:3.4.0"],\
@@ -48,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@altinn/figma-design-tokens", "workspace:."],\
+            ["change-case", "npm:4.1.2"],\
             ["rimraf", "npm:3.0.2"],\
             ["semver", "npm:7.3.5"],\
             ["simple-git", "npm:3.4.0"],\
