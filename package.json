@@ -6,6 +6,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
+    "change-case": "^4.1.2",
     "rimraf": "^3.0.2",
     "semver": "^7.3.5",
     "simple-git": "^3.4.0",
