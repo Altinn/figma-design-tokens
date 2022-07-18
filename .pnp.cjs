@@ -35,11 +35,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["change-case", "npm:4.1.2"],\
             ["rimraf", "npm:3.0.2"],\
-            ["semver", "npm:7.3.5"],\
-            ["simple-git", "npm:3.4.0"],\
-            ["style-dictionary", "npm:3.7.0"],\
-            ["token-transformer", "npm:0.0.19"],\
-            ["yargs", "npm:17.4.0"]\
+            ["semver", "npm:7.3.7"],\
+            ["simple-git", "npm:3.10.0"],\
+            ["style-dictionary", "npm:3.7.1"],\
+            ["token-transformer", "npm:0.0.24"],\
+            ["yargs", "npm:17.5.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -51,11 +51,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@altinn/figma-design-tokens", "workspace:."],\
             ["change-case", "npm:4.1.2"],\
             ["rimraf", "npm:3.0.2"],\
-            ["semver", "npm:7.3.5"],\
-            ["simple-git", "npm:3.4.0"],\
-            ["style-dictionary", "npm:3.7.0"],\
-            ["token-transformer", "npm:0.0.19"],\
-            ["yargs", "npm:17.4.0"]\
+            ["semver", "npm:7.3.7"],\
+            ["simple-git", "npm:3.10.0"],\
+            ["style-dictionary", "npm:3.7.1"],\
+            ["token-transformer", "npm:0.0.24"],\
+            ["yargs", "npm:17.5.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -549,10 +549,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["semver", [\
-        ["npm:7.3.5", {\
-          "packageLocation": "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/",\
+        ["npm:7.3.7", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.3.7-3bfe704194-2fa3e87756.zip/node_modules/semver/",\
           "packageDependencies": [\
-            ["semver", "npm:7.3.5"],\
+            ["semver", "npm:7.3.7"],\
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -571,10 +571,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["simple-git", [\
-        ["npm:3.4.0", {\
-          "packageLocation": "./.yarn/cache/simple-git-npm-3.4.0-d8b6234220-9b05f05dcc.zip/node_modules/simple-git/",\
+        ["npm:3.10.0", {\
+          "packageLocation": "./.yarn/cache/simple-git-npm-3.10.0-3041714c34-167a6c4b26.zip/node_modules/simple-git/",\
           "packageDependencies": [\
-            ["simple-git", "npm:3.4.0"],\
+            ["simple-git", "npm:3.10.0"],\
             ["@kwsites/file-exists", "npm:1.1.1"],\
             ["@kwsites/promise-deferred", "npm:1.1.1"],\
             ["debug", "virtual:8dde907e274d6cda4b3be6cd808e5a16421eab0e2ce2f6110b97323dbadda969b2dab36e690fd106d5bd3c87e0525cade2b2ba6fb4fb0c0e439212e4cf5c851b#npm:4.3.4"]\
@@ -616,10 +616,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["style-dictionary", [\
-        ["npm:3.7.0", {\
-          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.7.0-0860ecb1f5/node_modules/style-dictionary/",\
+        ["npm:3.7.1", {\
+          "packageLocation": "./.yarn/unplugged/style-dictionary-npm-3.7.1-20e1c9b69e/node_modules/style-dictionary/",\
           "packageDependencies": [\
-            ["style-dictionary", "npm:3.7.0"],\
+            ["style-dictionary", "npm:3.7.1"],\
             ["chalk", "npm:4.1.2"],\
             ["change-case", "npm:4.1.2"],\
             ["commander", "npm:8.3.0"],\
@@ -653,11 +653,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["token-transformer", [\
-        ["npm:0.0.19", {\
-          "packageLocation": "./.yarn/cache/token-transformer-npm-0.0.19-9aa5d622ac-bcc242c9fd.zip/node_modules/token-transformer/",\
+        ["npm:0.0.24", {\
+          "packageLocation": "./.yarn/cache/token-transformer-npm-0.0.24-f28df1d525-9fb7bc0b78.zip/node_modules/token-transformer/",\
           "packageDependencies": [\
-            ["token-transformer", "npm:0.0.19"],\
-            ["yargs", "npm:17.4.0"]\
+            ["token-transformer", "npm:0.0.24"],\
+            ["yargs", "npm:17.5.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -740,10 +740,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["yargs", [\
-        ["npm:17.4.0", {\
-          "packageLocation": "./.yarn/cache/yargs-npm-17.4.0-7544641b25-63985bdddd.zip/node_modules/yargs/",\
+        ["npm:17.5.1", {\
+          "packageLocation": "./.yarn/cache/yargs-npm-17.5.1-0902fa46de-00d58a2c05.zip/node_modules/yargs/",\
           "packageDependencies": [\
-            ["yargs", "npm:17.4.0"],\
+            ["yargs", "npm:17.5.1"],\
             ["cliui", "npm:7.0.4"],\
             ["escalade", "npm:3.1.1"],\
             ["get-caller-file", "npm:2.0.5"],\

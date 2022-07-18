@@ -11,11 +11,11 @@ __metadata:
   dependencies:
     change-case: ^4.1.2
     rimraf: ^3.0.2
-    semver: ^7.3.5
-    simple-git: ^3.4.0
-    style-dictionary: ^3.7.0
-    token-transformer: ^0.0.19
-    yargs: ^17.4.0
+    semver: ^7.3.7
+    simple-git: ^3.10.0
+    style-dictionary: ^3.7.1
+    token-transformer: ^0.0.24
+    yargs: ^17.5.1
   languageName: unknown
   linkType: soft
 
@@ -171,7 +171,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.1.1, debug@npm:^4.3.3":
+"debug@npm:^4.1.1, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -438,14 +438,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "semver@npm:7.3.5"
+"semver@npm:^7.3.7":
+  version: 7.3.7
+  resolution: "semver@npm:7.3.7"
   dependencies:
     lru-cache: ^6.0.0
   bin:
     semver: bin/semver.js
-  checksum: 5eafe6102bea2a7439897c1856362e31cc348ccf96efd455c8b5bc2c61e6f7e7b8250dc26b8828c1d76a56f818a7ee907a36ae9fb37a599d3d24609207001d60
+  checksum: 2fa3e877568cd6ce769c75c211beaed1f9fce80b28338cadd9d0b6c40f2e2862bafd62c19a6cff42f3d54292b7c623277bcab8816a2b5521cf15210d43e75232
   languageName: node
   linkType: hard
 
@@ -460,14 +460,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "simple-git@npm:3.4.0"
+"simple-git@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "simple-git@npm:3.10.0"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
-    debug: ^4.3.3
-  checksum: 9b05f05dcca69631317fdfa30288d342ac08b9822daea3a939c24fbbe24048ef768cae22e3e72b7a78c268635a63f72536e4530927c12d815a21be6e1e7a294e
+    debug: ^4.3.4
+  checksum: 167a6c4b2634bfcc4353a87ccbd7f66ecffa9111990341f7208614e70750f7b920c8858202dd8a535e4534f7539e0d94e89704a2d98cff47002f7dc989a4075f
   languageName: node
   linkType: hard
 
@@ -501,9 +501,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.7.0":
-  version: 3.7.0
-  resolution: "style-dictionary@npm:3.7.0"
+"style-dictionary@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "style-dictionary@npm:3.7.1"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
@@ -516,7 +516,7 @@ __metadata:
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: 97fd972e5eb57d931a2dc2f5e6461642f7c9cdff9bc54642b8ab1372b3a9e613f57fefdca406b773b9d5e061e8450a20967ab3d0c6da5bb2787ea246cede3eac
+  checksum: f2793b51d4c91625d1ee3385a2438c3fb0723183812c47f0fcea96703fc3a8a433ba4b496a3ab3d793c9827229d74483b4d8916d624d7d9bde5d36e8b18831fe
   languageName: node
   linkType: hard
 
@@ -536,14 +536,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"token-transformer@npm:^0.0.19":
-  version: 0.0.19
-  resolution: "token-transformer@npm:0.0.19"
+"token-transformer@npm:^0.0.24":
+  version: 0.0.24
+  resolution: "token-transformer@npm:0.0.24"
   dependencies:
-    yargs: ^17.3.1
+    yargs: ^17.4.1
   bin:
     token-transformer: index.js
-  checksum: bcc242c9fdcb11d2a87f304e82895cdd6b19b3d93fdee6e9d9bee777d4e78277c81944327188c54e9821b9bdf94e9479564762c26ba503e9549f3115c5a22c0e
+  checksum: 9fb7bc0b78a43d45471b4e2709b50a02b8626f6fb2259977798d970028b27f983744cfdf151383ca769159c63b1d1236196c5e68c81f3bffd03b3fca817d42f7
   languageName: node
   linkType: hard
 
@@ -618,9 +618,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.3.1, yargs@npm:^17.4.0":
-  version: 17.4.0
-  resolution: "yargs@npm:17.4.0"
+"yargs@npm:^17.4.1, yargs@npm:^17.5.1":
+  version: 17.5.1
+  resolution: "yargs@npm:17.5.1"
   dependencies:
     cliui: ^7.0.2
     escalade: ^3.1.1
@@ -629,6 +629,6 @@ __metadata:
     string-width: ^4.2.3
     y18n: ^5.0.5
     yargs-parser: ^21.0.0
-  checksum: 63985bddddf1fb6b9c98744591e8b70f99839591521cb84eea60903d52ec0da35ab46c42c325d151f3ab5c41935f976c10da096b5a7067c217714a91c0bd4be3
+  checksum: 00d58a2c052937fa044834313f07910fd0a115dec5ee35919e857eeee3736b21a4eafa8264535800ba8bac312991ce785ecb8a51f4d2cc8c4676d865af1cfbde
   languageName: node
   linkType: hard
