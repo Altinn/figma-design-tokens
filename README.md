@@ -83,4 +83,8 @@ You can now "pull from GitHub" (button on top right) to fetch the tokens. When d
 
 ## Releasing a new version
 
-Run `yarn release <patch|minor|major>` and push with tags: `git push --follow-tags`. The CI/CD GitHub Action will build and release a new package to the GitHub NPM repo.
+There may have been tokens that have been renamed or removed, which means consumers of this package need to take action before upgrading. So before creating a new version, be sure to **check the commit history for breaking changes**.
+
+For now this is a manual process. Look at the [commit history](https://github.com/Altinn/figma-design-tokens/commits/main) for the main branch, and inspect the commits up until the previous tagged commit.
+
+Then go to the Github Actions, and trigger a new Release with the correct version bump. If there is a breaking change, release it as a major version. If there is no breaking changes, release it as a minor version.
