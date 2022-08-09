@@ -5,15 +5,11 @@ on:
       release_type:
         description: "The type of release (one of 'patch', 'minor', or 'major')"
         required: true
-        default: patch
+        default: minor
         type: choice
         options:
-        - patch
         - minor
         - major
-  push:
-    tags:
-      - "v*.*.*"
 
 jobs:
   build_release:
