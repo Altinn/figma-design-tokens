@@ -1,4 +1,4 @@
-var noCase = require("change-case").noCase;
+const noCase = require("change-case").noCase;
 
 module.exports = {
   source: ["dist/tokens.json"],

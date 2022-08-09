@@ -8,11 +8,8 @@
   "devDependencies": {
     "change-case": "^4.1.2",
     "rimraf": "^3.0.2",
-    "semver": "^7.3.7",
-    "simple-git": "^3.10.0",
     "style-dictionary": "^3.7.1",
-    "token-transformer": "^0.0.24",
-    "yargs": "^17.5.1"
+    "token-transformer": "^0.0.24"
   },
   "files": [
     "dist"
