@@ -37,12 +37,11 @@ jobs:
         run: yarn run build
 
       - name: Prepare release version
-        # This step runs if the trigger is run manually; the version is created by calling `yarn release`
         if: ${{ ! github.event.after }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          yarn release ${{ github.event.inputs.release_type }}
+          npm release ${{ github.event.inputs.release_type }}
           echo "release_version=`git describe`" >> $GITHUB_ENV
           git push --follow-tags
 

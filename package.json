@@ -21,7 +21,6 @@
     "build": "yarn run clean && yarn run generate-json && yarn run generate-others",
     "clean": "rimraf dist",
     "generate-json": "token-transformer tokens.json dist/tokens.json --expandTypography",
-    "generate-others": "style-dictionary build",
-    "release": "yarn node ./release.mjs"
+    "generate-others": "style-dictionary build"
   }
 }
