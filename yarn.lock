@@ -12,7 +12,7 @@ __metadata:
     change-case: ^4.1.2
     rimraf: ^3.0.2
     style-dictionary: ^3.7.1
-    token-transformer: ^0.0.24
+    token-transformer: ^0.0.25
   languageName: unknown
   linkType: soft
 
@@ -467,14 +467,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"token-transformer@npm:^0.0.24":
-  version: 0.0.24
-  resolution: "token-transformer@npm:0.0.24"
+"token-transformer@npm:^0.0.25":
+  version: 0.0.25
+  resolution: "token-transformer@npm:0.0.25"
   dependencies:
     yargs: ^17.4.1
   bin:
     token-transformer: index.js
-  checksum: 9fb7bc0b78a43d45471b4e2709b50a02b8626f6fb2259977798d970028b27f983744cfdf151383ca769159c63b1d1236196c5e68c81f3bffd03b3fca817d42f7
+  checksum: a4390c1e274de194f4c26dcac52bf9a080af72c986510f7ec1a00bc77f3d5ba6e720a4e4fd7563beb98d723ffdefb94ff2bd38a838d7602682e9849845bfd026
   languageName: node
   linkType: hard
 
