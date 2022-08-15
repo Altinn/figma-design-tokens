@@ -8,6 +8,7 @@ on:
         default: minor
         type: choice
         options:
+        - patch
         - minor
         - major
 
