@@ -29,7 +29,7 @@ Or use the tokens as a module:
 ```jsx
 import tokens from "@altinn/figma-design-tokens";
 
-const Foo = () => <div style={{ padding: tokens.SpaceStandard }}>Hi</div>
+const Foo = () => <div style={{ padding: tokens.SpaceStandard }}>Hi</div>;
 ```
 
 Or as JSON:
@@ -37,7 +37,9 @@ Or as JSON:
 ```jsx
 import tokens from "@altinn/figma-design-tokens/dist/tokens.json";
 
-const Foo = () => <div style={{ padding: tokens.space.standard.value }}>Hi</div>
+const Foo = () => (
+  <div style={{ padding: tokens.space.standard.value }}>Hi</div>
+);
 ```
 
 (Note that in TypeScript you'll want to set `resolveJsonModule: true` for the above to work.)
@@ -50,18 +52,16 @@ You should use Figma to edit the tokens. You'll need the [Figma Tokens](https://
 1. Generate a new Personal Access Token (PAT) in [GitHub Developer Settings](https://github.com/settings/tokens) with scope `repo`
 1. Copy the PAT (you can only see it once)
 1. In the Figma Tokens plugin, under `Sync > GitHub`, add new credentials:
-    - Name: `Altinn Figma Tokens`
-    - Personal Access Token: *your PAT*
-    - Repository: `Altinn/figma-design-tokens`
-    - Default Branch: `main`
-    - File Path: `tokens.json`
+   - Name: `Altinn Figma Tokens`
+   - Personal Access Token: _your PAT_
+   - Repository: `Altinn/figma-design-tokens`
+   - Default Branch: `main`
+   - File Path: `tokens.json`
 
 You can now "pull from GitHub" (button on top right) to fetch the tokens. When done editing tokens, you should "push to GitHub" (second button on top right).
 
 ## Releasing a new version
 
-There may have been tokens that have been renamed or removed, which means consumers of this package need to take action before upgrading. So before creating a new version, be sure to **check the commit history for breaking changes**.
+Go to Github Actions, and trigger a new Release. For most cases, `auto` should be the preferred option. This will automatically identify breaking changes, new features, or changed values between previous release and the current release. A changelog with the differences will also be created and added to the release.
 
-For now this is a manual process. Look at the [commit history](https://github.com/Altinn/figma-design-tokens/commits/main) for the main branch, and inspect the commits up until the previous tagged commit.
-
-Then go to the Github Actions, and trigger a new Release with the correct version bump. If there is a breaking change, release it as a major version. If there is no breaking changes, release it as a minor version.
+There may be edge cases where you want to force the release to be of a certain type, where you can select one of the other options.

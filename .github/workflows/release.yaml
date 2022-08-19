@@ -3,14 +3,15 @@ on:
   workflow_dispatch:
     inputs:
       release_type:
-        description: "The type of release (one of 'patch', 'minor', or 'major')"
+        description: "'auto' should be preferred in most cases, see README for details"
         required: true
-        default: minor
+        default: auto
         type: choice
         options:
-        - patch
-        - minor
-        - major
+          - auto
+          - patch
+          - minor
+          - major
 
 jobs:
   build_release:
@@ -21,15 +22,15 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
+          fetch-depth: 0 # Need access to history for comparing previous releases
           ref: ${{ github.head_ref }}
 
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          registry-url: "https://npm.pkg.github.com"
+          node-version: "18.x"
 
       - name: Install dependencies
         run: yarn install --immutable
@@ -37,14 +38,16 @@ jobs:
       - name: Build
         run: yarn run build
 
-      - name: Prepare release version
-        if: ${{ ! github.event.after }}
+      - name: Test
+        run: yarn run test
+
+      - name: Create new version
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          RELEASE_TYPE: ${{ github.event.inputs.release_type }}
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          npm version ${{ github.event.inputs.release_type }}
+          yarn run create-release
           echo "release_version=`git describe`" >> $GITHUB_ENV
-          git push --follow-tags
 
       - name: Publish npm package
         run: yarn npm publish --access public
@@ -60,3 +63,4 @@ jobs:
           release_name: Release ${{ env.release_version }}
           draft: false
           prerelease: false
+          body_path: ./changes.md
