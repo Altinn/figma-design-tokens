@@ -62,8 +62,6 @@ You can now "pull from GitHub" (button on top right) to fetch the tokens. When d
 
 ## Releasing a new version
 
-There may have been tokens that have been renamed or removed, which means consumers of this package need to take action before upgrading. So before creating a new version, be sure to **check the commit history for breaking changes**.
+Go to Github Actions, and trigger a new Release. For most cases, `auto` should be the preferred option. This will automatically identify breaking changes, new features, or changed values between previous release and the current release. A changelog with the differences will also be created and added to the release.
 
-For now this is a manual process. Look at the [commit history](https://github.com/Altinn/figma-design-tokens/commits/main) for the main branch, and inspect the commits up until the previous tagged commit.
-
-Then go to the Github Actions, and trigger a new Release with the correct version bump. If there is a breaking change, release it as a major version. If there is no breaking changes, release it as a minor version.
+There may be edge cases where you want to force the release to be of a certain type, where you can select one of the other options.
