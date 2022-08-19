@@ -1,6 +1,6 @@
 {
   "name": "@altinn/figma-design-tokens",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "packageManager": "yarn@3.2.0",
   "devDependencies": {
     "change-case": "^4.1.2",
