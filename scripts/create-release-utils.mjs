@@ -26,7 +26,7 @@ export const getChanges = ({ prevTokens, currentTokens }) => {
           traverseAndIdentifyNewChanges(value, `${pathToKey}${key}.`);
         } else {
           newValues.push(
-            `\`${pathToKey}.${key}\` has been added with the value: \`${value}\``
+            `\`${pathToKey}${key}\` has been added with the value: \`${value}\``
           );
         }
       }
@@ -63,8 +63,9 @@ export const getChanges = ({ prevTokens, currentTokens }) => {
 
       if (key.endsWith(addedIdentifier)) {
         const cleanedKey = key.replace(addedIdentifier, "");
+
         if (typeof value === "object") {
-          newChanges.push(...getNewValues(value, `${pathToKey}${cleanedKey}`));
+          newChanges.push(...getNewValues(value, `${pathToKey}${cleanedKey}.`));
         } else {
           newChanges.push(
             `\`${pathToKey}${cleanedKey}\` has been added with the value: \`${value}\``
