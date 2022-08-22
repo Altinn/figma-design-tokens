@@ -133,13 +133,7 @@ export const getPreviousTag = async () => {
   return stdout;
 };
 
-export const checkEnv = () => {
-  if (!process.env.GITHUB_ACTOR) {
-    throw new Error(
-      "This script should only be run in the context of a github workflow"
-    );
-  }
-};
+export const checkEnv = () => Boolean(process.env.GITHUB_ACTOR);
 
 export const getNewVersionArg = ({ breakingChanges, newChanges }) => {
   const releaseType = process.env.RELEASE_TYPE;
