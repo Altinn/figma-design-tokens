@@ -4,8 +4,8 @@ import { execa } from "execa";
 
 const deletedIdentifier = "__deleted";
 const addedIdentifier = "__added";
-const newIdentifier = "__new";
-const oldIdentifier = "__old";
+const newValueIdentifier = "__new";
+const oldValueIdentifier = "__old";
 
 export const getValueByPath = (obj, path) =>
   path.split(".").reduce((node, i) => node[i], obj);
@@ -43,9 +43,9 @@ export const getChanges = ({ prevTokens, currentTokens }) => {
         traverseTokensAndIdentifyChanges(value, `${pathToKey}${key}.`);
       }
 
-      if (key.endsWith(newIdentifier)) {
+      if (key.endsWith(newValueIdentifier)) {
         const path = pathToKey.substring(0, pathToKey.length - 1); // Remove final period
-        const oldValue = getValueByPath(diff, path)[oldIdentifier];
+        const oldValue = getValueByPath(diff, path)[oldValueIdentifier];
 
         patchChanges.push(
           `\`${path}\` value has changed from \`${oldValue}\` to \`${value}\``
@@ -81,7 +81,11 @@ export const getChanges = ({ prevTokens, currentTokens }) => {
   return { breakingChanges, newChanges, patchChanges };
 };
 
-export const printChangesToFile = ({ breakingChanges, newChanges, patchChanges }) => {
+export const printChangesToFile = ({
+  breakingChanges,
+  newChanges,
+  patchChanges,
+}) => {
   let file;
   try {
     file = fs.createWriteStream("./changes.md");
