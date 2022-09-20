@@ -9,12 +9,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altinn/figma-design-tokens@workspace:."
   dependencies:
-    change-case: ^4.1.2
-    execa: ^6.1.0
-    json-diff: ^0.9.0
-    rimraf: ^3.0.2
-    style-dictionary: ^3.7.1
-    token-transformer: ^0.0.25
+    change-case: 4.1.2
+    execa: 6.1.0
+    json-diff: 0.9.0
+    rimraf: 3.0.2
+    style-dictionary: 3.7.1
+    token-transformer: 0.0.25
   languageName: unknown
   linkType: soft
 
@@ -82,7 +82,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"change-case@npm:^4.1.2":
+"change-case@npm:4.1.2, change-case@npm:^4.1.2":
   version: 4.1.2
   resolution: "change-case@npm:4.1.2"
   dependencies:
@@ -284,7 +284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^6.1.0":
+"execa@npm:6.1.0":
   version: 6.1.0
   resolution: "execa@npm:6.1.0"
   dependencies:
@@ -439,7 +439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-diff@npm:^0.9.0":
+"json-diff@npm:0.9.0":
   version: 0.9.0
   resolution: "json-diff@npm:0.9.0"
   dependencies:
@@ -647,7 +647,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^3.0.2":
+"rimraf@npm:3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
   dependencies:
@@ -729,7 +729,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.7.1":
+"style-dictionary@npm:3.7.1":
   version: 3.7.1
   resolution: "style-dictionary@npm:3.7.1"
   dependencies:
@@ -774,7 +774,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"token-transformer@npm:^0.0.25":
+"token-transformer@npm:0.0.25":
   version: 0.0.25
   resolution: "token-transformer@npm:0.0.25"
   dependencies:
