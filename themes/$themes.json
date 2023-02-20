@@ -5,7 +5,9 @@
     "selectedTokenSets": {
       "Base/Core": "source",
       "Base/Component": "source",
-      "Base/Semantic": "source"
+      "Base/Semantic": "source",
+      "Brand/Tilsynet": "disabled",
+      "Brand/Altinn": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -16,7 +18,9 @@
       "Base/Core": "source",
       "Mode/Compact": "enabled",
       "Base/Component": "source",
-      "Base/Semantic": "source"
+      "Base/Semantic": "source",
+      "Brand/Tilsynet": "disabled",
+      "Brand/Altinn": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -25,9 +29,10 @@
     "name": "Altinn",
     "selectedTokenSets": {
       "Base/Core": "source",
-      "Themes/Altinn": "enabled",
       "Base/Component": "source",
-      "Base/Semantic": "source"
+      "Base/Semantic": "source",
+      "Brand/Tilsynet": "disabled",
+      "Brand/Altinn": "enabled"
     },
     "$figmaStyleReferences": {}
   }
