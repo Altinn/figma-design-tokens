@@ -4,9 +4,9 @@
     "name": "Felles",
     "selectedTokenSets": {
       "Base/Core": "source",
-      "Base/Component": "source",
-      "Base/Semantic": "source",
-      "Base/Brand-default": "disabled"
+      "Base/Component": "enabled",
+      "Base/Semantic": "enabled",
+      "Base/Brand-default": "enabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -16,21 +16,20 @@
     "selectedTokenSets": {
       "Base/Core": "source",
       "Mode/Compact": "enabled",
-      "Base/Component": "source",
-      "Base/Semantic": "source",
-      "Base/Brand-default": "disabled"
+      "Base/Component": "enabled",
+      "Base/Semantic": "enabled",
+      "Base/Brand-default": "enabled"
     },
     "$figmaStyleReferences": {}
   },
   {
     "id": "df8b73b683752ef5f35b3cf293bbe5a0cba9f88d",
-    "name": "Altinn",
+    "name": "Tilsynet",
     "selectedTokenSets": {
       "Base/Core": "source",
-      "Base/Component": "source",
-      "Base/Semantic": "source",
-      "Brand/Altinn": "enabled",
-      "Base/Brand-default": "disabled"
+      "Base/Component": "enabled",
+      "Base/Semantic": "enabled",
+      "Brand/Tilsynet": "enabled"
     },
     "$figmaStyleReferences": {}
   }
