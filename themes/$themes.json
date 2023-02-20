@@ -6,8 +6,7 @@
       "Base/Core": "source",
       "Base/Component": "source",
       "Base/Semantic": "source",
-      "Brand/Tilsynet": "disabled",
-      "Brand/Altinn": "disabled"
+      "Base/Brand-default": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -19,8 +18,7 @@
       "Mode/Compact": "enabled",
       "Base/Component": "source",
       "Base/Semantic": "source",
-      "Brand/Tilsynet": "disabled",
-      "Brand/Altinn": "disabled"
+      "Base/Brand-default": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -31,8 +29,8 @@
       "Base/Core": "source",
       "Base/Component": "source",
       "Base/Semantic": "source",
-      "Brand/Tilsynet": "disabled",
-      "Brand/Altinn": "enabled"
+      "Brand/Altinn": "enabled",
+      "Base/Brand-default": "disabled"
     },
     "$figmaStyleReferences": {}
   }
