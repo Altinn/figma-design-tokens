@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "Base/Core",
+    "Base/Semantic",
+    "Base/Component",
+    "Mode/Compact",
+    "Themes/Tilsynet",
+    "Themes/Altinn"
+  ]
+}
