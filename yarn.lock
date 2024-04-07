@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@altinn/figma-design-tokens@workspace:."
   dependencies:
-    change-case: 4.1.2
+    change-case: 5.4.4
     execa: 6.1.0
     json-diff: 0.9.0
     rimraf: 3.0.2
@@ -82,7 +82,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"change-case@npm:4.1.2, change-case@npm:^4.1.2":
+"change-case@npm:5.4.4":
+  version: 5.4.4
+  resolution: "change-case@npm:5.4.4"
+  checksum: a22a25a763719658424ffbcd41e931d2d19cc22399cc765dca447fbe1eaf13e179d5e8ab1677af75f2e814dbddf74e42ffdecb526cd5bc906cc859f62aa154b2
+  languageName: node
+  linkType: hard
+
+"change-case@npm:^4.1.2":
   version: 4.1.2
   resolution: "change-case@npm:4.1.2"
   dependencies:
