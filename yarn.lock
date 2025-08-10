@@ -11,7 +11,7 @@ __metadata:
   dependencies:
     change-case: 4.1.2
     execa: 6.1.0
-    json-diff: 0.9.0
+    json-diff: 0.10.0
     rimraf: 3.0.2
     style-dictionary: 3.7.1
     token-transformer: 0.0.27
@@ -439,16 +439,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-diff@npm:0.9.0":
-  version: 0.9.0
-  resolution: "json-diff@npm:0.9.0"
+"json-diff@npm:0.10.0":
+  version: 0.10.0
+  resolution: "json-diff@npm:0.10.0"
   dependencies:
     cli-color: ^2.0.0
     difflib: ~0.2.1
     dreamopt: ~0.8.0
   bin:
     json-diff: bin/json-diff.js
-  checksum: c553da0e461ad940c50922c6939a8842930bf1a107dcfb4293cd79ab317cd405c0cc9d10013cc9c8bf47cab7dacdc1b72b17734b38ae23822088e980ca7aa0ae
+  checksum: 953f70bb4acbe7576d8587ecf18ebbeefb18a175b1f9d3bec6732b46790f7d0afc4119a68bc7e18fd63e39a013de373851fae3fe650cadd8da9bcd3bcb55b16e
   languageName: node
   linkType: hard
 
